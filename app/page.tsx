@@ -1,10 +1,21 @@
-import type { Metadata } from "next";
-import { Counter } from "./components/counter/Counter";
+// pages/ssrPage.js
 
-export default function IndexPage() {
-  return <Counter />;
-}
+import React from 'react';
+import { Grid, Typography } from '@mui/material';
+import MostViewMovie from './components/MostViewMovie';
 
-export const metadata: Metadata = {
-  title: "Redux Toolkit",
-};
+const page = () => (
+  <Grid container spacing={3} justifyContent="center">
+    <Grid item xs={12}>
+      <Typography variant="h2" align="center" gutterBottom>
+        Welcome to My Movie App
+      </Typography>
+    </Grid>
+    <Grid item xs={12}>
+      <MostViewMovie />
+    </Grid>
+    <Grid item xs={12} />
+  </Grid>
+);
+
+export default page;
